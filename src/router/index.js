@@ -6,5 +6,6 @@ Vue.use(Router)
 
 // new Router 创建一个路由实例
 export default new Router({
+    mode:'history',
     routes// es简写模式 routes=>等价于routes:routes
 })

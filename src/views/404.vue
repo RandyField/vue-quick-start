@@ -1,7 +1,6 @@
 <template>
     <div>
-        About页面
-        {{food}}
+        404
     </div>
 </template>
 <script>

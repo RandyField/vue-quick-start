@@ -5,31 +5,24 @@ export default [
         path: '/',
         name: 'home',//命名
         alias: '/home_page',//别名
-        component: Home,
-        props:route=>({
-            food:route.query.food
-        })
+        component: Home
     },
     {
         path: '/about',
         name: 'about', //命名路由--- 组件中调用 :to="{name : 'about'}"
         //which is lazy-loaded when the route is visited
-        component: () => import('@/views/about.vue'),
-        props:{
-            food:"apple"
-        }
+        component: () => import('@/views/about.vue')
     },
     //动态路由
     {
         path: '/argu/:name',
-        name:'argu',
-        component: () => import('@/views/argu.vue'),
-        props:true
+        name: 'argu',
+        component: () => import('@/views/argu.vue')
     },
     //嵌套路由
     {
         path: '/parent',
-        name:'parent',
+        name: 'parent',
         component: () => import('@/views/parent.vue'),
         children: [
             {
@@ -44,33 +37,13 @@ export default [
         components: {
             default: () => import('@/views/child.vue'),
             email: () => import('@/views/email.vue'),
-            tel: () => import('@/views/tel.vue'),
+            Tel: () => import('@/views/tel.vue'),
         }
     },
     //重定向
     {
-        path: '/main',       
-        //1.
-        // redirect:{
-        //     name:'home'
-        // }
-
-        //2.
-        // redirect:'/'
-
-        //3.https://blog.csdn.net/qq_41614928/article/details/102787344
-        // redirect:to=>'/'
-        // redirect:to=>{
-        //     return '/'
-        // }
-        // redirect:to=>{
-        //     return{
-        //         name:'home'
-        //     }
-        // }
-    },
-    {
-        path:'*',
-        component:()=>import('@/views/404.vue')
+        path: '/main',
+        // redirct:'/'
+        // redirct: { name: 'home' }
     }
 ]

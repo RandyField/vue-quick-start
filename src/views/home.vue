@@ -1,6 +1,7 @@
 <template>
   <div>
     Home页面
+    食物<b>{{food}}</b>
     <button @click="handleClick('back')">上一页</button>
     <button @click="handleClick('push')">下一页</button>
     <button @click="handleClick('replace')">替换</button>
@@ -8,6 +9,12 @@
 </template>
 <script>
 export default {
+  props:{
+    food:{
+      type:String,
+      default:"noddles"
+    }
+  },
   methods: {
     handleClick(type) {
       if (type === "back") {
