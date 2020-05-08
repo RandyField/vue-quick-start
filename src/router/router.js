@@ -37,7 +37,7 @@ export default [
         components: {
             default: () => import('@/views/child.vue'),
             email: () => import('@/views/email.vue'),
-            Tel: () => import('@/views/tel.vue'),
+            tel: () => import('@/views/tel.vue'),
         }
     },
     {

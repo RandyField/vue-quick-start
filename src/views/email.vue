@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="email">
         287572291@qq.com
         <button @click="handleClick">按我</button>
         {{message}}
@@ -13,22 +13,18 @@ export default {
         }
     },
     methods:{
-        handleClick(){
-            console.log(this)
-            console.log(this.$bus);
-            
+        handleClick(){            
             this.$bus.$emit('on-click','hello')
             // this.$emit('on-click','hahhwadfhsadfsdaa')
-
         }
     },
     mounted(){
-        this.$on('on-click',mes=>{
-            this.message=mes
-        })
+        console.log(this.$bus);       
     }
 }
 </script>
 <style>
-
+.email{
+    border: 1px solid red;
+}
 </style>
