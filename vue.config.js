@@ -27,8 +27,8 @@ module.exports = {
     publicPath:process.env.NODE_ENV === 'production'
     ? './'
     : '/',
-    outputDir:'dist',
-    indexPath:"index.html",
+    outputDir:'dist',//build后的路径
+    indexPath:"index.html",//build后的静态文件名称
     assetsDir:'static',//放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
     chainWebpack:config=>{
       config.resolve.alias
