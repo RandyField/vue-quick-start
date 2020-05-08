@@ -40,6 +40,10 @@ export default [
             Tel: () => import('@/views/tel.vue'),
         }
     },
+    {
+        path:'/store',
+        component: () => import('@/views/store.vue')
+    },
     //重定向
     {
         path: '/main',
